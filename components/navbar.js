@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { theme } from '../theme';
+import StyledLink from './styled-link';
 
 
 const StyledBurger = styled.div`
@@ -131,7 +132,7 @@ function Menu() {
   return (
     <StyledMenu>
       <div className="start">
-      <a href="/">
+      <StyledLink href="/">
       <svg  version="1.1" width="50px" height="50px"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" >
             <g >
                 <g >
@@ -145,22 +146,22 @@ function Menu() {
 		S361.9,337,317.5,337H262.7z M251,337l-42.6-78.2l-22.5,36.7l20.3-44.8l33.2-75.5L114,175.4V337H251z"/>
             </g>
         </svg>
-      </a>
+      </StyledLink>
       </div>
       <Burger open={open} onClick={() => setOpen(!open)} />
       <div className={!open ? "end" : "end open"}>
-      <a href="/projects">
+      <StyledLink href="/projects">
         PROJETS
-      </a>
-      <a href="/services">
+      </StyledLink>
+      <StyledLink href="/services">
         SERVICES
-      </a>
-      <a href="/whoami">
+      </StyledLink>
+      <StyledLink href="/whoami">
         WHOAMI
-      </a>
-      <a href="/contact">
+      </StyledLink>
+      <StyledLink href="/contact">
         CONTACT
-      </a>
+      </StyledLink>
       </div>
     </StyledMenu>
   )

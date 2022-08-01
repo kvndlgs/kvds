@@ -1,4 +1,3 @@
-import Alert from '../components/alert'
 import Navbar from '../components/navbar'
 import Meta from '../components/meta'
 import Footer from '../components/footer'

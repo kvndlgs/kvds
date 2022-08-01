@@ -48,7 +48,7 @@ const Services = styled.section`
   background: ${theme.colors.greenlite};
 `
 
-const Hero = styled.div` 
+const Hero = styled.div`
 width: 100vw;
 height: auto;
 margin:0 auto;
@@ -137,8 +137,7 @@ export default function Home() {
     <>
       <Head>
         <title>Kevin Desloges</title>
-        <meta name="description" content="Fuck off" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="prortfolio" />
       </Head>
       <Layout >
         <Hero id="hero">
@@ -161,7 +160,6 @@ export default function Home() {
           </div>
         </Hero>
 
-        {/* recent projects */}
 
         <ProjectsPreview>
           <div className="title">

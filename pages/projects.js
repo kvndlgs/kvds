@@ -21,18 +21,17 @@ export const projects = [
       contentImage2: '../images/servicesx2.png',
       coverImage: '/images/markalcollective-cover.png',
       text1: {
-        
         en: `Markal Collective is a young and ambitious enterprise that is making in the musical production industry.
         They needed a website as well as a complete branding that would reflect their values and goals. 
         The website would allow customers to reach the team easily via live chat, book an appointment, 
         stay tuned with shows and events, listen to the latest songs and to buy merch.`,
         
-        fr: `Markal Collective est une jeune et ambitieuse entreprise qui oeuvre dans le domaine de la production musicale 
-        et necessitais une image de marque refletants leurs valeurs et objectifs de façon precise. Le but premier etant 
-        d’offrir a leurs clients potentiels une façon simple et rapide d’entrée en contact avec eux ainsi que de trouver 
-        l’information nécessaire sur leurs services et disponibilitées. Étant donné la nature competitive du domaine, 
-        ils etaient primordiale de developper une solution permettant facilement d’ajouter du contenu ie: évènements 
-        a venir, sorties d’albums, chansons et actualités .`
+        fr: `Markal Collective est une jeune et ambitieuse entreprise qui oeuvre dans le domaine de la production musicale
+        et necessitais une image de marque refletants leurs valeurs et objectifs de façon precise. Le but premier etant
+        d’offrir a leurs clients potentiels une façon simple et rapide d’entrée en contact avec eux ainsi que de trouver
+        l’information nécessaire sur leurs services et disponibilitées. Étant donné la nature competitive du domaine,
+        ils etaient primordiale de developper une solution permettant facilement d’ajouter du contenu ie: évènements
+        a venir, sorties d'albums, chansons et actualités.`
       },
       source: 'https://github.com/kvdndlgs/markalcollective.git',
       visit: 'https://markalcollective.com',
@@ -106,7 +105,7 @@ export const projects = [
 
 
 
-const ProjectList = styled.div` 
+const ProjectList = styled.div`
  position: relative;
  width: 100%;
 `
@@ -119,7 +118,7 @@ function ProjectListItem({project}){
   return (
     <StyledProjectListItem>
       <h4> { project.title.en }</h4>
-      <img src={`../images/${project.thumbnailImage}`} alt="" height="300" width="300" />
+      <Image src={`../images/${project.thumbnailImage}`} alt="" height="300" width="300" />
     </StyledProjectListItem>
   )
 }
