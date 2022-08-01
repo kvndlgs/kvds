@@ -38,7 +38,7 @@ const StyledBurger = styled.div`
     border-radius: 0.25rem;
     position: relative;
   }
-  @media(max-width:1024px) {
+  @media(max-width:960px) {
     display: flex;
   }
 `
@@ -51,13 +51,13 @@ const StyledMenu = styled.nav`
  max-width: 100vw;
  background: #fff;
  justify-content: space-between;
- padding: ${theme.space[3] + 'px'} ${theme.space[5] + 'px'};
+ padding: ${theme.space[4] + 'px'} ${theme.space[5] + 'px'};
 
 
 
  @media(max-width: 960px) {
   height: auto;
-  padding: ${theme.space[3] + 'px'} ${theme.space[3]+ 'px'};
+  padding: ${theme.space[3] + 'px'} ${theme.space[4]+ 'px'};
  }
   .start {
    display: flex;

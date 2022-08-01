@@ -35,9 +35,9 @@ export const Global = createGlobalStyle`
   }
   h2 {
     font-family: IntegralCF-Bold, sans-serif;
-    font-size: 3.01rem;
+    font-size: 2.71rem;
     color: ${theme.colors.title};
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.12rem;
   }
   h3 {
     font-family: IntegralCF-Medium, sans-serif;
@@ -46,7 +46,7 @@ export const Global = createGlobalStyle`
     letter-spacing: 0.2rem;
   }
   h4 {
-    font-family: IntegralCF-DemiBold, sans-serif;
+    font-family: IntegralCF-Regular, sans-serif;
     font-size: 2rem;
     color: ${theme.colors.title};
     letter-spacing: 0.2rem;

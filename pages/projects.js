@@ -1,4 +1,3 @@
-import Container from '../components/container'
 import Layout from '../components/layout'
 import Head from 'next/head'
 import styled from 'styled-components';
@@ -16,9 +15,9 @@ export const projects = [
           en: 'Website',
           fr: 'Conception du siteweb pour Les Studio Markal Collective.'
       },
-      thumbnailImage: '../markalcollective-thumbnail.png',
-      contentImage1: '../images/homepagex2.png',
-      contentImage2: '../images/servicesx2.png',
+      thumbnailImage: '/images/markalcollective-thumbnail.png',
+      contentImage1: '/images/homepagex2.png',
+      contentImage2: '/images/servicesx2.png',
       coverImage: '/images/markalcollective-cover.png',
       text1: {
         en: `Markal Collective is a young and ambitious enterprise that is making in the musical production industry.
@@ -46,7 +45,7 @@ export const projects = [
           en: 'Portfolio website',
           fr: 'Mon Portfolio'
       },
-      thumbnailImage: '../images/thumbnailplaceholder.png',
+      thumbnailImage: '/images/thumbnailplaceholder.png',
       coverImage: '',
       source: '',
       visit: '',
@@ -62,8 +61,8 @@ export const projects = [
           en: '',
           fr: ''
       },
-      thumbnailImage: 'lediakessa-thumbnail.png',
-      coverImage: '../images/lediakessa-cover.png',
+      thumbnailImage: '/images/lediakessa-thumbnail.png',
+      coverImage: '/images/lediakessa-cover.png',
       source: '',
       visit: '',
       id: 2
@@ -78,7 +77,7 @@ export const projects = [
           en: '',
           fr: ''
       },
-      thumbnailImage: '../images/thumbnailplaceholder.png',
+      thumbnailImage: '/images/thumbnailplaceholder.png',
       coverImage: '',
       source: '',
       visit: '',
@@ -94,7 +93,7 @@ export const projects = [
           en: 'A minimalist framework for a distributed country, currently on Ethereum.',
           fr: 'A minimalist framework for a distributed country, currently on Ethereum.'
       },
-      thumbnailImage: '../images/thumbnailplaceholder.png',
+      thumbnailImage: '/images/thumbnailplaceholder.png',
       coverImage: '',
       source: 'https://github.com/kvndlgs/democracy',
       visit: 'democracy.js.org',
@@ -104,21 +103,42 @@ export const projects = [
 ]
 
 
+const Container =  styled.div`
+padding: ${theme.space[4]+'px'};
+  h2 {
+    text-align: center;
+    color: ${theme.colors.secondary}
+  }
+`
 
 const ProjectList = styled.div`
  position: relative;
- width: 100%;
+ max-width: 100vw;
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ flex-flow: row wrap;
+ padding: ${theme.space[4]+'px'} ${theme.space[4]+'px'} ${theme.space[5]+'px'} ${theme.space[4]+'px'};
 `
 
 const StyledProjectListItem = styled.div`
- padding: ${theme.space[3]+'px'};
+ margin: ${theme.space[4]+'px'};
+ position: relative;
+ border: 4px solid transparent;
+ p {
+  position: absolute;
+  max-width:200px;
+  z-index:1;
+  margin:20px;
+  color: #fff;
+ }
 `
 
 function ProjectListItem({project}){
   return (
     <StyledProjectListItem>
-      <h4> { project.title.en }</h4>
-      <Image src={`../images/${project.thumbnailImage}`} alt="" height="300" width="300" />
+      <p> { project.title.en }</p>
+      <Image fixed src={project.thumbnailImage} alt={project.title}  height={200} width={200} />
     </StyledProjectListItem>
   )
 }
@@ -131,7 +151,8 @@ export default function Projects() {
           <title>Works</title>
         </Head>
         <Container>
-           <h1> PROJECTS </h1>
+           
+           <h2> PROJECTS </h2>
            <ProjectList>
              {
               projects.map(item => {
