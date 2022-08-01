@@ -1,0 +1,208 @@
+{
+    "name": "Project",
+    "description": "",
+    "displayField": "slug",
+    "fields": [
+      {
+        "id": "slug",
+        "name": "Slug",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "thumbnailImage",
+        "name": "Thumbnail_Image",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "coverImage",
+        "name": "Cover_Image",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "url",
+        "name": "Url",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "type",
+        "name": "Type",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "subtitle",
+        "name": "Subtitle",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "defaultValue": {
+          "en-US": "THE CHALLENGE"
+        },
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "subtitle1",
+        "name": "Subtitle1",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "subtitle2",
+        "name": "Subtitle2",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "subtitle3",
+        "name": "Subtitle3",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "intro",
+        "name": "Intro",
+        "type": "RichText",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "enabledNodeTypes": [
+              "heading-1",
+              "heading-2",
+              "heading-3",
+              "heading-4",
+              "heading-5",
+              "heading-6",
+              "ordered-list",
+              "unordered-list",
+              "hr",
+              "blockquote",
+              "embedded-entry-block",
+              "embedded-asset-block",
+              "table",
+              "hyperlink",
+              "entry-hyperlink",
+              "asset-hyperlink",
+              "embedded-entry-inline"
+            ]
+          },
+          {
+            "enabledMarks": [
+              "bold",
+              "italic",
+              "underline",
+              "code"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "date",
+        "name": "Date",
+        "type": "Date",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
+    ],
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "mf70waxa47qe"
+        }
+      },
+      "id": "project",
+      "type": "ContentType",
+      "createdAt": "2022-07-26T22:19:52.498Z",
+      "updatedAt": "2022-07-29T00:17:01.592Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "publishedVersion": 37,
+      "publishedAt": "2022-07-29T00:17:01.592Z",
+      "firstPublishedAt": "2022-07-26T22:19:52.741Z",
+      "createdBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "1xkcl6hHYsO9SDqY0rH6bd"
+        }
+      },
+      "updatedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "1xkcl6hHYsO9SDqY0rH6bd"
+        }
+      },
+      "publishedCounter": 19,
+      "version": 38,
+      "publishedBy": {
+        "sys": {
+          "type": "Link",
+          "linkType": "User",
+          "id": "1xkcl6hHYsO9SDqY0rH6bd"
+        }
+      }
+    }
+  }

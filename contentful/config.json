@@ -1,0 +1,29 @@
+{
+    "spaceId": "mf70waxa47qe",
+    "environmentId": "master",
+    "managementToken": "dCFPAT-ocWkBSCbFPa4BpWfXGr6xRUk1o2YgSUVD2fWsbwtiZs",
+    "deliveryToken": "wyQd4McTC3z8uKBiboGSuBYcGRVMNkD4ztw2ACSr0fA",
+    "exportDir": "/",
+    "saveFile": true,
+    "contentFile": "export.json",
+    "includeDrafts": false,
+    "includeArchived": false,
+    "skipContentModel": false,
+    "skipEditorInterfaces": false,
+    "skipContent": false,
+    "skipRoles": false,
+    "skipWebhooks": false,
+    "contentOnly": false,
+    "queryEntries": [
+      "content_type=<content_type_id>",
+      "sys.id=<entry_id>"
+    ],
+    "downloadAssets": false,
+    "host": "api.contentful.com",
+    "proxy": "https://es2thekay@gmail.com:4!hYt5G@HweSvaw@host:port",
+    "rawProxy": false,
+    "maxAllowedLimit": 1000,
+    "limit": 25000,
+    "errorLogFile": "/path/to/error.log",
+    "useVerboseRenderer": false
+  }

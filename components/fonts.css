@@ -1,0 +1,29 @@
+@font-face {
+    font-family: IntegralCF-Bold;
+    src: url('../fonts/IntegralCF-Bold.woff');
+}
+@font-face {
+    font-family: IntegralCF-Medium;
+    src: url('../fonts/IntegralCF-Medium.woff');
+}
+@font-face {
+    font-family: IntegralCF-Heavy;
+    src: url('../fonts/IntegralCF-Heavy.woff');
+}
+@font-face {
+    font-family: IntegralCF-DemiBold;
+    src: url('../fonts/IntegralCF-DemiBold.woff');
+}
+@font-face {
+    font-family: Outfit-Regular;
+    src: url('../fonts/static/Outfit-Regular.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: Outfit-Medium;
+    src: url('../fonts/static/Outfit-Medium.ttf');
+}
+@font-face {
+    font-family: Outfit-SemiBold;
+    src: url('../fonts/static/Outfit-SemiBold.ttf');
+}
