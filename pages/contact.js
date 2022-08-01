@@ -12,7 +12,7 @@ export default function Contact(){
              <Layout>   
              <div>
                 <form action="api/form">
-                  <label for="name"> Name </label>
+                  <label> Name </label>
                   <input type="text" id="name" />
                   <button type="submit">ENVOYER</button>
                 </form>
