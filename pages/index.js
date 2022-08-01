@@ -9,6 +9,7 @@ import ProjectThumbnail from '../components/project-thumbnail';
 import Container from '../components/container';
 
 
+
 const bigTitle = {
   en: {
     content: `HELLO! I'M KEVIN. A FRONT-END DEV  & GRAPHIC DESIGNER FROM QUEBEC, CANADA.`
@@ -26,10 +27,31 @@ const subTitle = {
   }
 }
 
+const Contact = styled.section`
+   width: 100%;
+  height: auto;
+  padding: ${theme.space[3]+'px'};
+  background: #fff;
+`
+
+const Skills = styled.section`
+  width: 100%;
+  height: auto;
+  padding: ${theme.space[3]+'px'};
+  background: ${theme.colors.secondary};
+`
+
+const Services = styled.section`
+  width: 100%;
+  height: auto;
+  padding: ${theme.space[3]+'px'};
+  background: ${theme.colors.greenlite};
+`
+
 const Hero = styled.div` 
-width: 100%;
+width: 100vw;
 height: auto;
-margin:0;
+margin:0 auto;
 #text {
   height: auto;
   display: flex;
@@ -86,17 +108,22 @@ margin:0;
 
 const ProjectsPreview = styled.div`
  display: flex;
- width:100%;
+ flex-direction: column;
+ width:100vw;
  height:auto;
- padding: ${theme.space[5]+'px'};
- margin:0;
+ padding: ${theme.space[3]+'px'};
+ margin:0 auto;
  overflow: hidden;
  align-items: center;
- justify-content: space-around;
- background: ${theme.colors.primary};
+ justify-content: center;
+ background: ${theme.colors.purplelite};
  .title {
-  margin:0;
+  margin:0 auto;
   padding:0;
+  text-align: center;
+   h2 {
+    color: ${theme.colors.secondary};
+   }
  }
  .recent-projects {
   padding: ${theme.space[4]+'px'};
@@ -139,9 +166,20 @@ export default function Home() {
         <ProjectsPreview>
           <div className="title">
             <h2> RECENT PROJECTS </h2>
+            </div>
             <div className="recent-projects"></div>
-          </div>
         </ProjectsPreview>
+        <Services>
+          <h2> WHAT I DO? </h2>
+        </Services>
+        <Skills>
+          <h2> MY SKILLS</h2>
+        </Skills>
+
+        <Contact>
+          <h2> LET'S DO THIS </h2>
+        </Contact>
+
       </Layout>
     </>
   )

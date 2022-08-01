@@ -3,6 +3,8 @@ export const theme = {
         primary: '#CBA6FE',
         secondary: '#3D1556',
         thiercary: '#FF7392',
+        purplelite: '#EAE1F7',
+        greenlite: '#F1F7E1',
         title: '#CDDEDD',
         text: '',
         link: ''
