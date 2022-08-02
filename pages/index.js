@@ -6,10 +6,7 @@ import StyledLink from '../components/styled-link'
 import * as React from 'react'
 import { theme } from '../theme';
 import Image from 'next/image';
-import { projects } from '../pages/projects';
-import ProjectThumbnail from '../components/project-thumbnail';
-import Container from '../components/container';
-
+import Hero from '../components/hero';
 
 
 const bigTitle = {
@@ -36,36 +33,21 @@ const Contact = styled.section`
   background: #fff;
 `
 
-const Skills = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  align-items:center;
-  justify-content:center;
-  padding: ${theme.space[5]+'px'};
-  background: ${theme.colors.secondary};
-`
-
-const Services = styled.section`
-  width: 100%;
-  height: auto;
-  padding: ${theme.space[3]+'px'};
-  background: ${theme.colors.greenlite};
-`
+/*
 
 const Hero = styled.div`
-width: 100vw;
+width: 100%;
 height: auto;
 margin:0 auto;
 padding: ${theme.space[3]+'px'}  ${theme.space[3]+'px'} ${theme.space[4]+'px'}  ${theme.space[3]+'px'};
 #text {
+  width:100%;
   height: auto;
+  margin:0 auto;
+  padding:0;
   display: flex;
   justify-content: center;
   align-items:center;
-  position: relative;
-  top: -80px;
 .words {
     font-family: IntegralCF-Bold, sans-serif;
     display: flex;
@@ -110,11 +92,12 @@ padding: ${theme.space[3]+'px'}  ${theme.space[3]+'px'} ${theme.space[4]+'px'}  
  }
 }
 `
+*/
 
 const ProjectsPreview = styled.div`
  display: flex;
  flex-direction: column;
- width:100vw;
+ width:100%;
  height:auto;
  padding: ${theme.space[4]+'px'};
  margin:0 auto;
@@ -137,14 +120,17 @@ const ProjectsPreview = styled.div`
 
 export default function Home() {
   
-
   return (
     <>
       <Head>
         <title>Kevin Desloges</title>
         <meta name="description" content="prortfolio" />
       </Head>
-      <Layout >
+      <Layout>
+        <div className="container mx-auto">
+        <Hero />
+        </div>
+        {/*
         <Hero id="hero">
           <div id="text">
             <div className="words">
@@ -164,37 +150,83 @@ export default function Home() {
             </div>
           </div>
         </Hero>
+  */}
 
+        <section className="p-11 bg-primary-300">
+            <h2 className="text-2xl font-sans font-bold text-center text-secondary"> RECENT PROJECTS </h2>
+            <div className="columns-2">
 
-        <ProjectsPreview>
-          <div className="title">
-            <h2> RECENT PROJECTS </h2>
             </div>
-            <div className="recent-projects"></div>
-        </ProjectsPreview>
-        <Services>
-          <h2> WHAT I DO? </h2>
-          <h4> WEB DEVELOPMENT </h4>
-          <Image margin="20px" width={140} height={140} src="/images/icons/webdev-icon.png" alt="webdev" />
-          <StyledLink href='/projects'> SEE WORKS </StyledLink>
-        </Services>
-        <Skills>
-          <h2> MY SKILLS</h2>
-          <div className="skill-icons">
-          <Image width='100px' height='100px' responsive src="/images/icons/html.png" alt="html" />
-          <Image  width={100} height={100} responsive src="/images/icons/css.png" alt="css" />
-          <Image width={100} height={100} responsive src="/images/icons/js.png" alt="js" />
-          <Image width={100} height={100} responsive src="/images/icons/node.png" alt="node" />
-          <Image width={100} height={100} responsive src="/images/icons/react.png" alt="react" />
-          <Image width={100} height={100} responsive src="/images/icons/figma.png" alt="figma" />
-          <Image width={100} height={100} responsive src="/images/icons/git.png" alt="git" />
+        </section>
+
+        <section className="p-11 bg-green-lite">
+        <h2 className="text-2xl font-sans text-center"> WHAT I DO? </h2>
+        <div className="flex">
+          <div className="p-11 w-fit flex flex-col">
+          <h4 className="text-lg font-sans font-bold"> WEB DEVELOPMENT </h4>
+          <div>
+          <Image width={140} height={140} src="/images/icons/webdev-icon.png" alt="webdev" />
           </div>
-        </Skills>
+          <a href='/projects'> SEE WORKS </a>
+          </div>
+          <div className="p-11 w-fit flex flex-col">
+          <h4 className="text-lg font-sans font-bold"> WEB DEVELOPMENT </h4>
+          <div>
+          <Image width={140} height={140} src="/images/icons/webdev-icon.png" alt="webdev" />
+          </div>
+          <a href='/projects'> SEE WORKS </a>
+          </div>
+          </div>
+        </section>
 
-        <Contact>
-          <h2> LET'S DO THIS </h2>
+        <section className=" bg-secondary">
+          <h2 className="text-2xl font-sans font-bold text-center text-primary-50 p-11"> MY SKILLS</h2>
+          
+          <div className="grid grid-cols-4 grid-rows-2 gap-4 p-11 center">
+          <div>
+          <Image width='100px' height='100px' src="/images/icons/html.png" alt="html" />
+          </div>
+          <div>
+          <Image  width={100} height={100}  src="/images/icons/css.png" alt="css" />
+          </div>
+          <div>
+          <Image width={100} height={100}  src="/images/icons/js.png" alt="js" />
+          </div>
+          <div>
+          <Image width={100} height={100}  src="/images/icons/js.png" alt="ts" />
+          </div>
+          <div>
+          <Image width={100} height={100}  src="/images/icons/node.png" alt="node" />
+          </div>
+          <div>
+          <Image width={100} height={100}  src="/images/icons/react.png" alt="react" />
+          </div>
+          <div>
+          <Image width={100} height={100}  src="/images/icons/figma.png" alt="figma" />
+          </div>
+          <div>
+          <Image width={100} height={100}  src="/images/icons/git.png" alt="git" />
+          </div>
+          </div>
+        </section>
 
-        </Contact>
+        <section className="p-11">
+          <h2 className="text-2xl font-sans text-center text-primary-400"> LET'S DO THIS </h2>
+
+          <form className="flex flex-wrap">
+            <label>NOM</label>
+            <input
+             type="text"
+             />
+
+             <label> EMAIL </label>
+             <input
+               type="email"
+              />
+              <button type="submit">SEND</button>
+          </form>
+
+        </section>
 
       </Layout>
     </>

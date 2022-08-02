@@ -136,10 +136,10 @@ const StyledProjectListItem = styled.div`
 
 function ProjectListItem({project}){
   return (
-    <StyledProjectListItem>
+    <div>
       <p> { project.title.en }</p>
       <Image fixed src={project.thumbnailImage} alt={project.title}  height={200} width={200} />
-    </StyledProjectListItem>
+    </div>
   )
 }
 
@@ -152,18 +152,18 @@ export default function Projects() {
         </Head>
         <Container>
            
-           <h2> PROJECTS </h2>
-           <ProjectList>
+           <h2 className="text-3xl"> PROJECTS </h2>
+           <ul>
              {
               projects.map(item => {
                 return (
-                  <StyledLink href={`/projects/${item.id}`} key={item.id}>
+                  <li href={`/projects/${item.id}`} key={item.id}>
                     <ProjectListItem project={item} />
-                  </StyledLink>
+                  </li>
                 )
               })
              }
-           </ProjectList>
+           </ul>
         </Container>
       </Layout>
     </>

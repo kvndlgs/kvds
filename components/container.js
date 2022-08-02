@@ -1,7 +1,4 @@
-import styled from 'styled-components';
-import {padding, flexbox} from 'styled-system';
-
 export default function Container({ children }) {
-    return <div padding={padding} flexbox={flexbox}>{children}</div>
+    return <div className="mx-auto max-w-3x1 px-4 sm:px-6 xl:max-w-5x1 xl:px-0">{children}</div>
   }
   

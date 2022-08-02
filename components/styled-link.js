@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-const Sl = styled.a` 
+const Sl = styled.a`
 text-decoration: none;
 margin:0;
 padding:0;
