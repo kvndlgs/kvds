@@ -127,7 +127,7 @@ export default function Home() {
         <meta name="description" content="prortfolio" />
       </Head>
       <Layout>
-        <div className="container mx-auto">
+        <div className="p-0">
         <Hero />
         </div>
         {/*

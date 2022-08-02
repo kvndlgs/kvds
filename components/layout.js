@@ -10,7 +10,7 @@ export default function Layout({preview, children}){
         <>
         <Meta />
         <Navbar />
-         <main className="p-0"> {children}</main>
+         <main> {children}</main>
          <Footer />
         </>
     )

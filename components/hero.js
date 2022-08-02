@@ -1,9 +1,11 @@
 import * as React from 'react';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import Model from './model';
+import {Canvas, OrbitControls } from '@react-three/fiber';
 
 
-export default function Hero(sizes){
+
+export default function Hero({props}){
+    /*
     React.useEffect(() => {
         let scene,  
         renderer,
@@ -146,15 +148,23 @@ export default function Hero(sizes){
       
       
     })
+    */
     return (
-        <div>
-            <div class="loading" id="js-loader">
-                <div class="loader"></div>
-        </div>
-  
-
-            <canvas id="c"></canvas>
-      </div>
+        <Canvas
+        camera={{ position: [2, 0, 12.25], fov: 15 }}
+        style={{
+           backgroundColor: '#fff',
+           width: '100%',
+           height: '80vh',
+        }}
+     >
+        <ambientLight intensity={1.0} />
+        <ambientLight intensity={0.1} />
+        <directionalLight intensity={0.4} />
+        <React.Suspense fallback={null}>
+        <Model position={[0.025, -0.9, 0]} />
+        </React.Suspense>
+     </Canvas>
 
     )
 }
