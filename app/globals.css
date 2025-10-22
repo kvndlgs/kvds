@@ -10,7 +10,14 @@
 }
 
 @font-face {
-  font-family: "Wallop-TRIAL-Medium";
+  font-family: "Wallopt-TRIAL Heavy";
+  font-weight: 900;
+  src: url('./fonts/Wallop-TRIAL-Heavy.woff2') format('woff2');
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Wallop-TRIAL Medium";
   src: url('./fonts/Wallop-TRIAL-Medium.woff2') format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -18,9 +25,13 @@
 
 
 :root {
-  --font-wallop-medium: 'Wallop-TRIAL-Medium';
-  --font-wallop: 'WallopVF-Trial';
+  --font-wallop-medium: 'Wallop-TRIAL Medium';
+  --font-wallop-heavy: 'Wallop-TRIAL Heavy';
+/*  --font-wallop: 'WallopVF-Trial'; */
   --accent: #E87D89;
+  --l: #c95e8d;
+  --2: hsl(238, 100%, 81%);
+  --3: #efa79e93;
   --secondary: oklch(0.97 0 0);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -58,7 +69,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  --font-sans: var(--font-wallop);
+  --font-sans: var(--font-wallop-medium);
+  --font-sans-heavy: var(--font-wallop-heavy);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
