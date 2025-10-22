@@ -28,7 +28,8 @@
   --font-wallop-medium: 'Wallop-TRIAL Medium';
   --font-wallop-heavy: 'Wallop-TRIAL Heavy';
 /*  --font-wallop: 'WallopVF-Trial'; */
-  --accent: #E87D89;
+/*  --accent: hsl(353, 81%, 65%); */
+  --accent: #f17832; /* halloween accent */
   --l: #c95e8d;
   --2: hsl(238, 100%, 81%);
   --3: #efa79e93;

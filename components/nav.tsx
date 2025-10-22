@@ -1,6 +1,7 @@
 'use client'
 
 import StaggeredMenu from './StaggeredMenu';
+import { useNav } from '@/lib/NavContext';
 //import Logo from './logo';
 
 const menuItems = [
@@ -18,6 +19,7 @@ const socialItems = [
 ];
 
 export default function Nav() {
+  const { isNavOpen, setIsNavOpen } = useNav();
 
 return (
 <div className='absolute right-0 top-0 w-screen h-screen z-50'>
@@ -34,8 +36,8 @@ return (
     colors={['#7dd6e8a2', '#e87dda8d']}
     logoUrl="/kd.svg"
     accentColor="#E87D89"
-    onMenuOpen={() => console.log('Menu opened')}
-    onMenuClose={() => console.log('Menu closed')}
+    onMenuOpen={() => setIsNavOpen(true)}
+    onMenuClose={() => setIsNavOpen(false)}
   />
   </div>
   )

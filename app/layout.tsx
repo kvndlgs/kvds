@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Nav from "@/components/nav";
-
+import NavWrapper from "@/components/NavWrapper";
 
 
 export const metadata: Metadata = {
@@ -20,8 +20,10 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-      <Nav />
+      <NavWrapper>
+        <Nav />
         {children}
+      </NavWrapper>
       </body>
     </html>
   );
