@@ -148,3 +148,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.case-study {
+  display: block;
+  background: #FFF;
+}
+
+.case-study h2 {
+  font-family: 'Wallop-TRIAL Heavy', sans-serif;
+  color: #4A4A4A;
+  font-size: 60px;
+}
+.case-study h3 {
+  font-family: 'font-wallop Medium', sans-serif;
+  font-size: 45px;
+  color: #794f61;
+  padding-bottom: 1rem;
+  padding-top:1.5rem;
+}
+
+.case-study ul {
+  padding: 2px 4px 4px 2px;
+}
+
+.case-study p {
+    font-size: 1.125rem; /* Slightly larger body text for a modern feel */
+    line-height: 1.7;    /* Critical for readability; provides 'breathing room' */
+    margin-bottom: 2rem; /* Generous space between paragraphs */
+}

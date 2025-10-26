@@ -15,8 +15,9 @@ interface WorkProps {
   contentHtml: string;
 };
 
-const CaseStudyPage = async ({ params }: { params: { work: string } }) => {
+const CaseStudyPage = async ({ params }: { params: { work: string, order: number } }) => {
   const fullPath = path.join(process.cwd(), 'data', 'case-studies', `${params.work}.md`);
+
 
   let fileContents;
   try {
@@ -25,7 +26,7 @@ const CaseStudyPage = async ({ params }: { params: { work: string } }) => {
     return (
       <div className="container mx-auto px-6 py-20 text-center">
         <h1 className="text-5xl font-bold text-[#4D4D4D] mb-4">Project Not Found</h1>
-        <p className="text-gray-600">The case study you are looking for does not exist.</p>
+        <p className="text-[rgb(120,120,120)]">The case study you are looking for does not exist.</p>
       </div>
     );
   }
@@ -51,18 +52,27 @@ const CaseStudyPage = async ({ params }: { params: { work: string } }) => {
 
   return (
     <div className="container mx-auto px-6 py-20">
+
       <h1 className="text-5xl font-bold text-center text-[#4D4D4D] mb-4">{project.title}</h1>
-      {project.subtitle && <h2 className="text-2xl text-center text-gray-700 mb-8">{project.subtitle}</h2>}
+
+      {project.subtitle && <h2 className="text-2xl text-center text-[#4D4D4D] mb-8">{project.subtitle}</h2>}
+
       {project.imageUrl && <img src={project.imageUrl} alt={project.title} className="w-full h-96 object-cover mb-8 rounded-lg" />}
       <div className="flex flex-wrap justify-center gap-2 mb-8">
+   
         {project.tags && project.tags.map((tag, index) => (
-          <span key={index} className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+      
+      <span key={index} className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+
             {tag}
+     
           </span>
         ))}
       </div>
+      <div className='flex flex-wrap items-center gap-4 border-b py-4 mt-6'>
       {project.category && <p className="text-center text-gray-600 mb-4">Category: {project.category}</p>}
-      <div className="prose mx-auto" dangerouslySetInnerHTML={{ __html: project.contentHtml }} />
+     </div>
+      <div className="case-study prose mx-auto" dangerouslySetInnerHTML={{ __html: project.contentHtml }} />
     </div>
   );
 };

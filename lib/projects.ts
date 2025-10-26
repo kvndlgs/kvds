@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 export interface ProjectData {
+  order: number;
   title: string;
   subtitle?: string;
   tags?: string[];
@@ -21,6 +22,7 @@ export function getSortedProjectsData(): ProjectData[] {
     const { data } = matter(fileContents);
 
     return {
+      order: data.order || '',
       slug: filename.replace(/\.md$/, ''),
       title: data.title || 'No Title',
       subtitle: data.subtitle || '',
@@ -32,7 +34,7 @@ export function getSortedProjectsData(): ProjectData[] {
 
   // Sort projects by title for now, can be changed later
   return allProjectsData.sort((a, b) => {
-    if (a.title < b.title) {
+    if (a.order < b.order) {
       return 1;
     } else {
       return -1;
