@@ -4,6 +4,9 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { SITE_INFO } from '@/config/site';
 
 interface WorkProps {
   title: string;
@@ -14,6 +17,50 @@ interface WorkProps {
   slug: string;
   contentHtml: string;
 };
+
+export async function generateMetadata({ params }: { params: { work: string } }): Promise<Metadata> {
+  const fullPath = path.join(process.cwd(), 'data', 'case-studies', `${params.work}.md`);
+
+  try {
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+
+    const title = `${matterResult.data.title} - Case Study`;
+    const description = matterResult.data.subtitle || `Read about the ${matterResult.data.title} project`;
+    const imageUrl = matterResult.data.imageUrl || `${SITE_INFO.url}/images/og-image.png`;
+
+    return {
+      title,
+      description,
+      openGraph: {
+        title,
+        description,
+        url: `${SITE_INFO.url}/works/${params.work}`,
+        siteName: SITE_INFO.name,
+        images: [
+          {
+            url: imageUrl,
+            width: 1200,
+            height: 630,
+            alt: matterResult.data.title,
+          },
+        ],
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: [imageUrl],
+      },
+    };
+  } catch (error) {
+    return {
+      title: 'Project Not Found',
+      description: 'The case study you are looking for does not exist.',
+    };
+  }
+}
 
 const CaseStudyPage = async ({ params }: { params: { work: string, order: number } }) => {
   const fullPath = path.join(process.cwd(), 'data', 'case-studies', `${params.work}.md`);
@@ -57,7 +104,18 @@ const CaseStudyPage = async ({ params }: { params: { work: string, order: number
 
       {project.subtitle && <h2 className="text-2xl text-center text-[#4D4D4D] mb-8">{project.subtitle}</h2>}
 
-      {project.imageUrl && <img src={project.imageUrl} alt={project.title} className="w-full h-96 object-cover mb-8 rounded-lg" />}
+      {project.imageUrl && (
+        <div className="relative w-full h-96 mb-8 rounded-lg overflow-hidden">
+          <Image
+            src={project.imageUrl}
+            alt={project.title}
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 1200px"
+          />
+        </div>
+      )}
       <div className="flex flex-wrap justify-center gap-2 mb-8">
    
         {project.tags && project.tags.map((tag, index) => (

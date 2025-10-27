@@ -1,11 +1,10 @@
-import LiquidEther from './LiquidEther';
-
+import LiquidEther from "./LiquidEther";
 
 const HeroBackground = () => {
   return (
-    <div className="-z-10, w-screen h-screen absolute top-0 left-0 bottom-0 right-0 bg-white opacity-70" >
+    <div className="-z-10, w-screen h-screen absolute top-0 left-0 bottom-0 right-0 bg-white opacity-90">
       <LiquidEther
-        colors={['#c95e8d', '#efa79e93', '#efa79e93']}
+        colors={["#c95e8d", "#efa79e93", "#efa79e93"]}
         mouseForce={20}
         cursorSize={100}
         isViscous={false}
@@ -22,8 +21,7 @@ const HeroBackground = () => {
         autoRampDuration={0.6}
       />
     </div>
-  )
+  );
 };
 
 export default HeroBackground;
-

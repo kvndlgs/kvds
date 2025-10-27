@@ -1,5 +1,5 @@
 ---
-order: 0,
+order: 2
 title: Parapluie
 subtitle: Rethinking senior safety apps through empathetic UX, AI guidance, and family-centered design.
 tags:

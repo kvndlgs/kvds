@@ -1,5 +1,5 @@
 ---
-order: 1,
+order: 1
 title: Aura Chain
 subtitle: AuraChain is a blockchain-powered student recognition platform.
 tags: ["Web3", "Solana", "Blockchain", "Education", "DeFi", "NFTs"]

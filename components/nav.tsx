@@ -29,7 +29,7 @@ export default function Nav() {
         isFixed={false}
         position="right"
         items={menuItems}
-        socialItems={socialItems}
+        //        socialItems={socialItems}
         displaySocials={true}
         displayItemNumbering={true}
         menuButtonColor="#4A4A4A"

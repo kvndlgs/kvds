@@ -1,15 +1,28 @@
 {
-  "name": "kv",
+  "name": "kvds",
   "version": "0.1.0",
-  "private": true,
+  "description": "Minimal portfolio website",
+  "homepage": "https://kvds.space",
+  "private": false,
+  "author": {
+    "name": "Kevin D.",
+    "email": "poissedonn@email.com",
+    "url": "https://kvds.space"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvndlgs/kvds.git"
+  },
   "dependencies": {
+    "@next/third-parties": "^16.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.18",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
     "lucide-react": "^0.546.0",
@@ -18,6 +31,7 @@
     "react-dom": "19.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "schema-dts": "^1.1.5",
     "tailwind-merge": "^3.3.1",
     "three": "^0.180.0"
   },

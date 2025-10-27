@@ -22,7 +22,7 @@ export function getSortedProjectsData(): ProjectData[] {
     const { data } = matter(fileContents);
 
     return {
-      order: data.order || '',
+      order: data.order || 999,
       slug: filename.replace(/\.md$/, ''),
       title: data.title || 'No Title',
       subtitle: data.subtitle || '',
@@ -32,12 +32,12 @@ export function getSortedProjectsData(): ProjectData[] {
     };
   });
 
-  // Sort projects by title for now, can be changed later
+  // Sort projects by order field (ascending - lower numbers first)
   return allProjectsData.sort((a, b) => {
     if (a.order < b.order) {
-      return 1;
-    } else {
       return -1;
+    } else {
+      return 1;
     }
   });
 }
