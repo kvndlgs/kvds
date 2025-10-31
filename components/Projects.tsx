@@ -19,7 +19,7 @@ const Projects = ({ projects }: ProjectsProps) => {
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative w-full h-62">
                 <Image
-                  src={project.imageUrl}
+                  src={project.imageUrl || ''}
                   alt={project.title}
                   fill
                   className="object-cover"
